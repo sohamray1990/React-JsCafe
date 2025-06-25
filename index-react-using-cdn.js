@@ -16,7 +16,7 @@ const child2 = React.createElement("span", {}, "from React")
 const div = React.createElement("p", {}, [child1, child2])
 
 // Create Root
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const root = ReactDOM.createRoot(document.getElementById("root-react-cdn"))
 
 // Append to the React element to the root
 root.render(div)
