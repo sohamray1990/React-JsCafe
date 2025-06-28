@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import App from "./App";
 
 /**
  * Lesson 1: REACT UNDER THE HOOD
@@ -53,16 +54,20 @@ import { createRoot } from "react-dom/client";
  * Lesson 3: COMPONENTS INTRODUCTION
  */
 
-const Greeting = () => {
-  return <h1>Hello, World!</h1>; // We can also add event listeners like: onClick={() => console.log("Hello World")}
-};
+// const Greeting = () => {
+//   return <h1>Hello, World!</h1>; // We can also add event listeners like: onClick={() => console.log("Hello World")}
+// };
 
 // Create Root
-const root = createRoot(document.getElementById("root"));
+// const root = createRoot(document.getElementById("root"));
 
 // Append to the React component to the root
 // Do not pass "Greeting" OR "Greeting()", as Greeting is a component
 // Instead, use it as a JSX element
-root.render(<Greeting/>); 
+// root.render(<Greeting/>); 
 
 // End of Lesson 3
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App/>); 
+
