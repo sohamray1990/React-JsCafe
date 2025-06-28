@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 
 /**
  * Lesson 1: REACT UNDER THE HOOD
@@ -14,17 +14,55 @@ import { createRoot } from 'react-dom/client';
 // const div = React.createElement("p", {}, [child1, child2])
 // console.log(div) // This showcases React element structure in the DOM
 
+// Create Root
+// const root = createRoot(document.getElementById("root"));
+
+// Append to the React element to the root
+// root.render(div);
+
+// End of Lesson 1
+
 /**
  * Lesson 2: JSX INTRODUCTION
  * Use Case 1 - Ternary operator
- * Use Case 2 - Conditional Rendering 
+ * Use Case 2 - Conditional Rendering
  */
 
-// JSX Below
-const div = <div>Hello Again!</div>
+// Use Case 1 - Ternary operator
+// const isTrue = true;
+// const div = <div>{isTrue ? "Hello World" : "Goodbye World"}</div>;
+
+// Use Case 2 - Conditional Rendering
+// const isLoggedIn = true;
+// const userName = "John Doe";
+// const div = (
+//   <div>
+//     {isLoggedIn ? <h1>Welcome back, {userName}!</h1> : <h1>Please log in.</h1>}
+//   </div>
+// );
 
 // Create Root
-const root = createRoot(document.getElementById("root"))
+// const root = createRoot(document.getElementById("root"));
 
-// Append to the React element to the root 
-root.render(div)
+// Append to the React element to the root
+// root.render(div);
+
+// End of Lesson 2
+
+/**
+ * Lesson 3: COMPONENTS INTRODUCTION
+ */
+
+const Greeting = () => {
+  return <h1>Hello, World!</h1>; // We can also add event listeners like: onClick={() => console.log("Hello World")}
+};
+
+// Create Root
+const root = createRoot(document.getElementById("root"));
+
+// Append to the React component to the root
+// Do not pass "Greeting" OR "Greeting()", as Greeting is a component
+// Instead, use it as a JSX element
+root.render(<Greeting/>); 
+
+// End of Lesson 3
